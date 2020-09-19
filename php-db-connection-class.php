@@ -35,13 +35,6 @@ class Db{
 		}
 	}
 
-	public function delete_row($id){
-		$sql = "DELETE FROM portfolio WHERE id='$id'";
-		if (!$this->conn->query($sql)) {
-			$this->error = $this->conn->error;
-		}
-	}
-
 	public function get_row($sql){
 		$data = $this->conn->query($sql);
 		if ($data) {

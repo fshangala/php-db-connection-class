@@ -1,8 +1,14 @@
 # php-db-connection-class
 This class initially creates a connection to the specified database and has methods for displaying error and querying the database by just passing an SQL string.
 
-# Db($host,$user,$pass,$db)
-This class is named Db() and has a constructor function which initialises everything
+## Setup
+When a class inherrits from the Db class, the Db class initialises a dabase connection in preparation to execute queries to the database. Therefore before inheriting from it it is important to mention the database credentials to connect to. 
+'''php
+	public $servername = "localhost";
+	public $username = "root";
+	public $password = "";
+	public $dbname = "homeexhibit";
+'''
 
 ## __constructor()
 The constructor function takes four arguments passed when initialing the object i.e $host, $user, $pass, $db. These are used to initialise a database connection.
